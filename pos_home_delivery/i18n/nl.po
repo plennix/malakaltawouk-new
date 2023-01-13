@@ -1,0 +1,927 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_home_delivery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-23 11:32+0000\n"
+"PO-Revision-Date: 2022-08-23 11:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid "%s (Copy)"
+msgstr "%s (kopiëren)"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "9090909090"
+msgstr ""
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "<span>Address</span>"
+msgstr "<span>Adres</span>"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "<span>Order No :</span>"
+msgstr "<span>Bestelnr :</span>"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_needaction
+msgid "Action Needed"
+msgstr "Actie nodig"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Add New Product"
+msgstr "Nieuw product toevoegen"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Add a Order Note..."
+msgstr "Voeg een bestelnotitie toe..."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__address
+#, python-format
+msgid "Address"
+msgstr "Adres"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Address:"
+msgstr "Adres:"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos.py:0
+#: code:addons/pos_home_delivery/models/pos.py:0
+#, python-format
+msgid ""
+"Already one payment selected as home delivery , you can not create multiple "
+"home delivery methods."
+msgstr ""
+"Reeds één betaling geselecteerd als thuisbezorging, u kunt er niet meerdere aanmaken "
+"thuisbezorgmethodes."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Appointment Time"
+msgstr "Tijd van afspraak"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "By Default Shipped to Selected Customer Address"
+msgstr "Standaard verzonden naar het geselecteerde klantadres"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields.selection,name:pos_home_delivery.selection__pos_delivery_order__state__cancel
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+#, python-format
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__cashier_id
+msgid "Cashier"
+msgstr "Kassa"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__city
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+#, python-format
+msgid "City"
+msgstr "Stad"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "City/Area/Town (Optional)"
+msgstr "Stad/Gebied/Plaats (Optioneel)"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Clear"
+msgstr "Duidelijk"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__country_id
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Country"
+msgstr "Land"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Create"
+msgstr "Creëren"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__create_uid
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__create_date
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__partner_id
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_tree_view
+msgid "Customer"
+msgstr "Klant"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Date:"
+msgstr "Datum:"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Deliver By:"
+msgstr "Bezorgen door:"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields.selection,name:pos_home_delivery.selection__pos_delivery_order__state__delivered
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Delivered"
+msgstr "Geleverd"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__partner_shipping_id
+msgid "Delivery Address"
+msgstr "Bezorgadres"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_product_product__is_home_delivery_charge
+#: model:product.product,description_sale:pos_home_delivery.delivery_charge_product
+#: model:product.product,name:pos_home_delivery.delivery_charge_product
+#: model:product.template,description_sale:pos_home_delivery.delivery_charge_product_product_template
+#: model:product.template,name:pos_home_delivery.delivery_charge_product_product_template
+msgid "Delivery Charge"
+msgstr "Bezorgkosten"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Delivery Date"
+msgstr "Bezorgdatum"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Delivery Info:"
+msgstr "Leveringsinfo:"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_tree_view
+msgid "Delivery Order"
+msgstr "Leveringsopdracht"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__delivery_lines
+msgid "Delivery Order Lines"
+msgstr "Leveringsorderregels"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Delivery Order Search"
+msgstr "Levering bestelling zoeken"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Delivery Order not Created"
+msgstr "Leveringsopdracht niet aangemaakt"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__person_id
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Delivery Person"
+msgstr "Bezorger"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__delivery_date
+msgid "Delivery Time"
+msgstr "Tijd om te bezorgen"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__partner_shipping_id
+msgid "Delivery address for current sales order."
+msgstr "Afleveradres voor huidige verkooporder."
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__pos_delivery_id
+msgid "Delivery order"
+msgstr "Leveringsopdracht"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Delivery person"
+msgstr "Bezorger"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__display_name
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__email
+#, python-format
+msgid "Email"
+msgstr "E-mail"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Email (Optional)"
+msgstr "Email optioneel)"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Empty Order !"
+msgstr "Lege bestelling!"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Extra Info"
+msgstr "Extra info"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Volgers (kanalen)"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Partners)"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Group By"
+msgstr "Groeperen op"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_config__pos_verify_delivery
+#: model:ir.ui.menu,name:pos_home_delivery.menu_pos_home_delivery_id
+#, python-format
+msgid "Home Delivery"
+msgstr "Levering aan huis"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#: model:ir.actions.act_window,name:pos_home_delivery.pos_home_delivery_order_action
+#, python-format
+msgid "Home Delivery Order"
+msgstr "Bestelling thuisbezorgd"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid "Home/Delivery"
+msgstr "Levering aan huis"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__id
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__id
+msgid "ID"
+msgstr "ID kaart"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_needaction
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt, vragen nieuwe berichten uw aandacht."
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_has_error
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt, hebben sommige berichten een bezorgfout."
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "In Progress"
+msgstr "Bezig"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid "In order to delete a delivery, it must be new or cancelled."
+msgstr "Om een levering te verwijderen, moet deze nieuw of geannuleerd zijn."
+
+#. module: pos_home_delivery
+#: model:ir.model.fields.selection,name:pos_home_delivery.selection__pos_delivery_order__state__in_progress
+msgid "In progress"
+msgstr "Bezig"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_is_follower
+msgid "Is Follower"
+msgstr "Is volger"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_order__delivery_order
+msgid "Is Home Delivery Order"
+msgstr "Is Thuisbezorgd Bestelling"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__item_note
+msgid "Item Note"
+msgstr "Item Opmerking:"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_account_journal
+msgid "Journal"
+msgstr "logboek"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order____last_update
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__write_uid
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__write_date
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__write_date
+msgid "Last Updated on"
+msgstr "Laatst geupdate op"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Locality"
+msgstr "Plaats"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hoofdbijlage"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Make Payment"
+msgstr "Betaling maken"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Fout bij bezorging van bericht"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Mobile"
+msgstr "Mobiel"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__mobile
+msgid "Mobile/Phone"
+msgstr "Mobiele telefoon"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Mobile:"
+msgstr "Mobiel:"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Name"
+msgstr "Naam"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Name:"
+msgstr "Naam:"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields.selection,name:pos_home_delivery.selection__pos_delivery_order__state__draft
+msgid "New"
+msgstr "Nieuw"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos.py:0
+#, python-format
+msgid ""
+"No cash statement found for this session. Unable to record returned cash."
+msgstr ""
+"Geen kasafschrift gevonden voor deze sessie. Kan geretourneerde contanten niet opnemen."
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Aantal berichten waarvoor een actie vereist is"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met bezorgfout"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Aantal ongelezen berichten"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Only enter integer value"
+msgstr "Voer alleen een geheel getal in"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__order_date
+msgid "Order Date"
+msgstr "Besteldatum"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__order_no
+msgid "Order No"
+msgstr "Bestelnr"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__order_note
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Order Note"
+msgstr "Bestel Opmerking:"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__pos_order_id
+msgid "Order Ref"
+msgstr "Bestelreferentie"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Other Info"
+msgstr "Andere informatie"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Other Information"
+msgstr "Andere informatie"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_delivery_order_config_form_view
+msgid "POS Home Delivery"
+msgstr "POS Thuisbezorging"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid ""
+"POS Order not found !. \n"
+"\n"
+" Before making payment, You need to validate POS order from front-end"
+msgstr ""
+"POS Bestelling niet gevonden!. \n"
+"\n"
+" Voordat u de betaling uitvoert, moet u de POS-bestelling valideren vanaf de front-end"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields.selection,name:pos_home_delivery.selection__pos_delivery_order__state__paid
+msgid "Paid"
+msgstr "Betaald"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Payment Amount Exceeded"
+msgstr "Betalingsbedrag overschreden"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__payment_ids
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Payments"
+msgstr "Betalingen"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please Select Delivery Person."
+msgstr "Selecteer bezorger."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your  mobile details properly"
+msgstr "Vul uw mobiele gegevens correct in"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your address details properly."
+msgstr "Gelieve uw adresgegevens correct in te vullen."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your city details properly.'"
+msgstr "Vul a.u.b. uw stadsgegevens correct in."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your details delivery date properly."
+msgstr "Vul a.u.b. uw gegevens afleverdatum correct in."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Please fill your details properly."
+msgstr "Gelieve uw gegevens correct in te vullen."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your name details properly."
+msgstr "Vul a.u.b. uw naam correct in."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your street details properly."
+msgstr "Gelieve uw straatgegevens correct in te vullen."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Please fill your zip details properly."
+msgstr "Vul uw zip-gegevens correct in."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Please select some products"
+msgstr "Selecteer a.u.b. enkele producten"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuratie van verkooppunt"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Verkooppunt bestellingen"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Betaalmethoden op het verkooppunt"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__item_rate
+msgid "Price"
+msgstr "Prijs"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_product_product
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__product_id
+msgid "Product"
+msgstr "Product"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Products"
+msgstr "Producten"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order_line__item_qty
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__user_id
+msgid "Responsible"
+msgstr "Aansprakelijk"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Sms-bezorgingsfout"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Select"
+msgstr "Selecteer"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__session_id
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Session"
+msgstr "Sessie"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Set Delivery Person"
+msgstr "Bezorger instellen"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Set To New"
+msgstr "Instellen op nieuw"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Ship to Different Address"
+msgstr "Naar een ander adres versturen"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Society or Building"
+msgstr "Maatschappij of gebouws"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__state
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__state_id
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "State"
+msgstr "Staat"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "Status"
+msgstr "Toestand"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__street
+#, python-format
+msgid "Street"
+msgstr "Straat"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Street ..."
+msgstr "Straat..."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid ""
+"This order already create home delivery , new product you can not added."
+msgstr ""
+"Deze bestelling maak je al thuisbezorgd, nieuw product kun je niet toevoegen."
+
+#. module: pos_home_delivery
+#: model:product.product,uom_name:pos_home_delivery.delivery_charge_product
+#: model:product.template,uom_name:pos_home_delivery.delivery_charge_product_product_template
+msgid "Units"
+msgstr "Eenheden"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Unknown customer"
+msgstr "Onbekende klant"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_unread
+msgid "Unread Messages"
+msgstr "ongelezen berichten"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Teller ongelezen berichten"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_account_bank_statement_import_journal_creation__is_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_account_journal__is_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_payment_method__is_home_delivery
+msgid "Use as Home Delivery"
+msgstr "Gebruik als thuisbezorging"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_search_view
+msgid "User"
+msgstr "Gebruiker"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__website_message_ids
+msgid "Website Messages"
+msgstr "Website-berichten"
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_delivery_order__website_message_ids
+msgid "Website communication history"
+msgstr "Geschiedenis van websitecommunicatie"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "Write your note..."
+msgstr "Schrijf je notitie..."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "Wrong Payment Method"
+msgstr "Verkeerde betaalmethode"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "You can not use other payment method for home delivery order."
+msgstr "U kunt voor een bestelling aan huis geen andere betaalmethode gebruiken."
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "You cannot Pay More than Total Amount"
+msgstr "U kunt niet meer betalen dan het totale bedrag"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/js/pos_delivery.js:0
+#, python-format
+msgid "You cannot use Home Delivery. Select customer first."
+msgstr "U kunt geen Thuisbezorgd gebruiken. Selecteer eerst de klant."
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid "Your account has been created with amount: %s"
+msgstr "Uw account is aangemaakt met bedrag: %s"
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos_delivery.py:0
+#, python-format
+msgid "Your delivery order has already paid"
+msgstr "Je bezorgopdracht is al betaald"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#: model:ir.model.fields,field_description:pos_home_delivery.field_pos_delivery_order__zip
+#, python-format
+msgid "Zip"
+msgstr "Zip"
+
+#. module: pos_home_delivery
+#. openerp-web
+#: code:addons/pos_home_delivery/static/src/xml/pos_delivery.xml:0
+#, python-format
+msgid "Zip Code"
+msgstr "Postcode"
+
+#. module: pos_home_delivery
+#: model_terms:ir.ui.view,arch_db:pos_home_delivery.pos_home_delivery_order_form_view
+msgid "address..."
+msgstr "adres..."
+
+#. module: pos_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_account_bank_statement_import_journal_creation__is_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_account_journal__is_home_delivery
+#: model:ir.model.fields,help:pos_home_delivery.field_pos_payment_method__is_home_delivery
+msgid ""
+"if you use this journal as home delivery, it will not create any payment "
+"entries for that order"
+msgstr ""
+"als je dit journaal als thuisbezorging gebruikt, wordt er geen betaling aangemaakt "
+"inzendingen voor die bestelling"
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_pos_delivery_order
+msgid "pos.delivery.order"
+msgstr ""
+
+#. module: pos_home_delivery
+#: model:ir.model,name:pos_home_delivery.model_pos_delivery_order_line
+msgid "pos.delivery.order.line"
+msgstr ""
+
+#. module: pos_home_delivery
+#: code:addons/pos_home_delivery/models/pos.py:0
+#, python-format
+msgid "return"
+msgstr "opbrengst"

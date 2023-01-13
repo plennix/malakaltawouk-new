@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_pos_pos_form">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"></field>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name='quotation_id' />
+                </field>
+            </field>
+        </record>
+        <record id="pos_config_view_form_pos_sale" model="ir.ui.view"> 
+            <field name="name">pos.config.form.pos.sale</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <sheet position='inside'>
+                    <group name="call_center" string="Call Center">
+                        <field name='is_call_center' />
+                        <field name="is_branch"/>
+                    </group>
+                </sheet>
+            </field>
+        </record>
+        
+        <record id="pos_quotation_view_form" model="ir.ui.view">
+            <field name="name">pos.quotation.form</field>
+            <field name="model">pos.quotation</field>
+            <field name="arch" type="xml">
+                <form string="Quotations">
+                    <header>
+                        <button name="wv_order_cancel" string="Cancel" type="object" attrs="{'invisible':[('state','in',('done','cancel'))]}" />
+                        <button name="wv_order_confirm" string="Confirm" type="object" attrs="{'invisible':[('state','!=','draft')]}" />
+                        <button name="wv_order_sent" string="Sent" type="object" attrs="{'invisible':[('state','!=','confirm')]}" />
+                        <button name="wv_order_done" string="Done" type="object" attrs="{'invisible':[('state','!=','sent')]}" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+                    <sheet>
+                    <group col="4" colspan="4" name="order_fields">
+                        <field name="name"/>
+                        <field name="delivery_date"/>
+                        <field name="partner_id"/>
+                        <field name="pricelist_id"/>
+                        <field name="branch_id" domain="[('is_branch','=',True)]"/>
+                        <!-- <field name="stock_location"/> -->
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Products">
+                            <field name="lines" colspan="4" nolabel="1" >
+                                <tree string="Quotations lines" editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="extra_note"/>
+                                    <field name="qty"/>
+                                    <field name="price_unit" widget="monetary"/>
+                                    <field name="discount" widget="monetary"/>
+                                    <field name="tax_ids"/>
+                                    <field name="price_subtotal" widget="monetary"/>
+                                    <field name="price_subtotal_incl" widget="monetary"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                <field name="amount_tax" widget="monetary"/>
+                                <div class="oe_subtotal_footer_separator oe_inline">
+                                    <label for="amount_total" />
+                                    <button name="button_dummy"
+                                         string="(update)" class="oe_edit_only oe_link"/>
+                                </div>
+                                <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary"/>
+                            </group>
+                            <div class="oe_clear"/>
+                        </page>
+                        <page string="Notes" >
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>               
+                </form>
+            </field>
+        </record>               
+        <record id="pos_quotation_view_tree" model="ir.ui.view">
+            <field name="name">pos.quotation.tree</field>
+            <field name="model">pos.quotation</field>
+            <field name="arch" type="xml">
+                <tree string="Quotations">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total" sum="Amount total" widget="monetary"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_quotation_action" model="ir.actions.act_window">
+            <field name="name">Quotations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.quotation</field>
+            <field name="view_mode">tree,form</field>                   
+        </record>
+        <menuitem name="Quotations" id="menu_point_ofsale" parent="point_of_sale.menu_point_of_sale" action="pos_quotation_action" sequence="0"/>
+
+    </data>
+</openerp>

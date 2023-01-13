@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ReceivedorderButton" owl="1">
+        <div class='control-button'>
+           <i class="fa fa-paper-plane" aria-hidden="true"></i> Received order
+        </div>
+    </t>
+    <t t-name="CreateQuotationButton" owl="1">
+        <div class='control-button'>
+           <i class="fa fa-paper-plane" aria-hidden="true"></i> Transfer order
+        </div>
+    </t>
+    <t t-name="QuotationListButton" owl="1">
+        <div class='control-button'>
+          <i class="fa fa-list" aria-hidden="true"></i> Order List
+        </div>
+    </t>
+
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]" position="inside">
+            <t t-if="props.line.get_extra_note()">
+                <li class="info orderline-note">
+                    <i class="fa fa-tag" role="img" aria-label="Note" title="Note"/>
+                    <t t-esc="props.line.get_extra_note()" />
+                </li>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name="PosExtNotePopupWidget" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <Draggable>
+                <div class="popup popup-textarea">
+                    <header class="title drag-handle">
+                        <t t-esc="props.title" />
+                    </header>
+                    <main class="body" style="height: 270px;">
+                        <textarea t-model="state.inputValue" t-ref="input"></textarea>
+                        <div>
+                            <t t-if="props.wv_order_note">
+                                <t t-foreach='props.wv_order_note' t-as='shortuct'>
+                                    <div class="button" t-on-click="shortcut_button"><t t-esc="shortuct.name"/></div>
+                                </t>
+                            </t>
+                        </div>
+                    </main>
+                    <footer class="footer">
+                        <div class="button confirm" t-on-click="confirm">
+                            Ok
+                        </div>
+                        <div class="button cancel" t-on-click="cancel">
+                            Cancel
+                        </div>
+                    </footer>
+                </div>
+            </Draggable>
+        </div>
+    </t>
+
+    <t t-name="OrderlineNoteExButton" owl="1">
+        <div class='control-button'>
+            <i class='fa fa-tag' /> Line Note
+        </div>
+    </t>
+
+    <t t-name="QuotationLine" owl="1">
+        <tr class='client-line' t-att-data-id='props.quotation.id'>
+            <td><t t-esc='props.quotation.name' /></td>
+            <td><t t-if="props.quotation.partner_id"><t t-esc='props.quotation.partner_id[1]' /></t></td>
+            <td><t t-esc='props.quotation.delivery_date' /></td>
+            <td><t t-esc='env.pos.format_currency(props.quotation.amount_total)' /></td>
+            <td><t t-esc="props.quotation.branch_id[1]"/></td>
+            <td><t t-esc="props.quotation.state"/></td>
+        </tr>
+    </t>
+
+
+    <t t-name="QuotationListScreenWidget" owl="1">
+        <div class="clientlist-screen screen" t-on-activate-edit-mode="activateEditMode">
+            <div class="screen-content">
+                <div class="top-content">
+                    <div class="button back" t-on-click="back">
+                        <t t-if="!env.isMobile">Discard</t>
+                        <t t-else="">
+                            <i class="fa fa-undo"></i>
+                        </t>
+                    </div>
+                    <div t-if="!state.detailIsShown" class="searchbox-client top-content-center">
+                        <input placeholder="Search Quotations" size="1" t-on-keyup="updateClientList" />
+                        <span class="search-clear-client"></span>
+                    </div>
+                </div>
+                <section class="full-content">
+                    <div class="client-window">
+                        <section class="subwindow list">
+                            <div class="subwindow-container">
+                                <div t-if="!state.detailIsShown" class="subwindow-container-fix scrollable-y">
+                                    <table class="client-list">
+                                        <thead>
+                                            <tr>
+                                                <th>Quotation Ref.</th>
+                                                <th t-if="!env.isMobile">Customer Name</th>
+                                                <th t-if="!env.isMobile">Date</th>
+                                                <th>Total amount</th>
+                                                <th>Branch</th>
+                                                <th>State</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="client-list-contents">
+                                            <t t-foreach="clients" t-as="quotation"
+                                               t-key="quotation.id">
+                                                <QuotationLine quotation="quotation"
+                                                            selectedClient="state.selectedClient"
+                                                            detailIsShown="state.detailIsShown"
+                                                            t-on-click-client="clickClient" />
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+
+
+    <t t-name="QuotationBillScreenWidget" owl="1">
+        <div class="receipt-screen screen">
+            <div class="screen-content">
+                <div class="top-content">
+                    <div class="top-content-center">
+                        <h1>Bill Printing</h1>
+                    </div>
+                    <span class="button next highlight" t-on-click="confirm">
+                        <span>Ok</span>
+                        <span> </span>
+                        <i class="fa fa-angle-double-right"></i>
+                    </span>
+                </div>
+                <div class="centered-content">
+                    <div class="button print" t-on-click="printReceipt">
+                        <i class="fa fa-print"></i>
+                        <span> </span>
+                        <span>Print</span>
+                    </div>
+                    <div class="pos-receipt-container">
+                        <OrderReceipt order="currentOrder" isBill="true" t-ref="order-receipt"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="CreateQuotationPopupWidget" owl="1">
+        <div class="modal-dialog">
+            <div class="popup" style="height: 450px;">
+                <p class="title">
+                     <i class="fa fa-paper-plane" aria-hidden="true"></i> Transfer order
+                </p>
+                <div class="content-container ">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                Date :-
+                            </td>
+                            <td>
+                                <input class="delivery_date" type="datetime-local"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Note :-
+                            </td>
+                            <td>
+                                <textarea class="wv_note" rows="5" cols="28" placeholder="Enter your note........"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Branch :-
+                            </td>
+                            <td>
+                                <select style="width: 77%;margin: 13px;font-size: 28px;" class="order_kitchen">
+                                    <t t-if="env.pos.kitchens">
+                                        <t t-foreach="env.pos.kitchens" t-as="kitchen">
+                                            <option t-att-value="kitchen.id">
+                                                <t t-esc="kitchen.name" />
+                                            </option>
+                                        </t>
+                                    </t>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Priority:-
+                            </td>
+                            <td>
+                                <select style="width: 77%;margin: 13px;font-size: 28px;" class="order_priorty">
+                                    <option value="0">Low</option>
+                                    <option value="1">Normal</option>
+                                    <option value="2">Urgent</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button" t-on-click="transfer_order">
+                        Save
+                    </div>
+                    <div class="button" t-on-click="print_transfer_order">
+                        Save/Print 
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend="PosTicket">
+        <t t-jquery="t[t-if='receipt.footer']" t-operation='before'>
+            <t t-if="order.quotation_id">
+                Quotation Ref: <t t-esc="order.quotation_id"/>
+            </t>
+        </t>
+    </t>
+
+    <t t-name="KitchenScreenWidget" owl="1">
+        <div class="clientlist-screen screen" t-on-activate-edit-mode="activateEditMode">
+            <div>
+                <div class="top-content">
+                    <span class='button' t-on-click="back">
+                        <i class='fa fa-angle-double-left'></i>
+                        Back
+                    </span>
+                    <div class="top-content-center" style="margin-top: 15px;">
+                        <select class="order_arrangement" style="font-size: 25px;" t-on-change="order_arrangement">
+                          <option value="ascending">Ascending</option>
+                          <option value="descending">Descending</option>
+                        </select>
+                        <select class="order_prior" style="font-size: 25px;" t-on-change="order_prior">
+                          <option value="all">All</option>
+                          <option value="0">Low</option>
+                          <option value="1">Normal</option>
+                          <option value="2">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+            <center>
+                <!-- <t t-set='index_val' t-value='-1' /> -->
+                <t t-foreach="branch_quotations" t-as="quot" t-key="quot.id">
+                    <!-- <t t-set='index_val' t-value='index_val+1' /> -->
+                    <div class="pos-sale-ticket pos_original_view box" style="width: 90%;margin: 0px;padding-bottom:0px;padding:2px">
+                        <div class="ribbon">
+                             <t t-if="quot.order_priority == 0">
+                                <span style="background: linear-gradient(#9BC90D 0%, #79A70A 100%);">Low</span>
+                            </t>
+                            <t t-if="quot.order_priority == 1">
+                                <span style="background: linear-gradient(#0D47A1 0%, #2196F3 100%);">Normal</span>
+                            </t>
+                            <t t-if="quot.order_priority == 2">
+                                <span style="background: linear-gradient(#B71C1C 0%, #D50000 100%);">Urgent</span>
+                            </t>
+                        </div>
+
+                        <!-- <div class="pos-center-align"><t t-esc="data.name"/></div> -->
+                        <h3 class="kitchen_order" t-att-data-id="wvid" t-on-click="kitchen_order(quot.id)">
+                            <t t-if='quot.partner_id'>
+                                <t t-if='env.pos.db.get_partner_by_id(quot.partner_id)'>
+                                    <t t-set='partner_val' t-value='env.pos.db.get_partner_by_id(quot.partner_id)' />
+                                    <t t-if="partner_val.name">
+                                        <b>Name : </b><t t-esc="partner_val.name"/>&#160;&#160;&#160;&#160;
+                                    </t>
+                                    <t t-if="partner_val.phone">
+                                        <b>Phone : </b><t t-esc="partner_val.phone"/>&#160;&#160;&#160;&#160;
+                                    </t>
+                                </t>
+                            </t>
+                            <span class="pos-right-align"><b>Delivery date : </b><t t-esc="quot.delivery_date"/></span>
+                        </h3>
+                        <t t-set='total' t-value='0' />
+                        <table t-attf-class="receipt-orderlines kitchen_table {{ quot.is_hidden ? 'hide_block' : '' }}" >
+                            <colgroup>
+                                <col width='10%' />
+                                <col width='40%' />
+                                <col width='40%' />
+                                <col width='20%' />
+                                <col width='5%' />
+                            </colgroup>
+                            <tr class="table_header_wv">
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Note</th>
+                                <th class="pos-right-align">Quantity</th>
+                                
+                            </tr>
+                            <t t-set='wv_line_id' t-value='0' />
+                            <tr t-foreach="quot.lines" t-as="orderline">
+                                <td>
+                                    <img t-attf-src="/web/image?model=product.product&amp;field=image_128&amp;id={{orderline.product_id}}" style="width: 50px;height: 40px;" />
+                                </td>
+                                <td class="kitchen_td">
+                                    <t t-esc="env.pos.db.get_product_by_id(orderline.product_id).display_name"/><br/>
+                                </td>
+                                <td>
+                                    <t t-if="orderline.note"><t t-esc="orderline.note"/></t>
+                                </td>
+                                <td class="pos-right-align">
+                                    <t t-esc="orderline.qty"/>
+                                    <t t-set='total' t-value='total + orderline.qty' />
+                                </td>
+                               <t t-set='wv_line_id' t-value='wv_line_id + 1' />
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="pos-right-align"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>             
+                                    <select style="font-size: 20px;" class="transfer_order_kitchen">
+                                        <option value="0"></option>
+                                        <t t-if="env.pos.kitchens">
+                                            <t t-foreach="env.pos.kitchens" t-as="kitchen">
+                                                <t t-if="kitchen.id != env.pos.config.id">
+                                                    <option t-att-value="kitchen.id">
+                                                        <t t-esc="kitchen.name" />
+                                                    </option>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </select>
+                                    <button class="wv_transfer_order" t-att-data-id="quot.id" t-on-click="wv_transfer_order">
+                                        Transfer
+                                    </button>
+                                </td>
+                                <td class="pos-right-align">
+                                    <button class="order_deliver" t-on-click="order_deliver(quot.id)">
+                                        Deliver
+                                    </button>
+                                    <button class="wv_print" t-att-data-id="wvid">Print</button>
+                                </td>
+                                <td class="pos-right-align">Total Qty: <t t-esc='total' /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </center>
+        </div>
+    </div>
+    </t>
+
+
+  <t t-name="XmlKitchenReceipt">
+        <receipt align='center' width='40' value-thousands-separator='' >
+            <div font='b'>
+                <t t-if='data.name'>
+                    <div><t t-esc='data.name' /></div>
+                </t>
+                <t t-set='partner' t-value='widget.get_partner_by_id(data.partner_id)' />
+                <t t-if="partner">
+                    <t t-if='partner.name'>
+                        <div>Name:<t t-esc="partner.name"/></div>
+                    </t>
+                    <t t-if='partner.phone'>
+                        <div>Phone :<t t-esc="partner.phone"/></div>
+                    </t>
+                </t>
+                <t t-if='data.floor'>
+                    <div>Floor:<t t-esc='data.floor'/></div>
+                </t>
+                <t t-if='data.table_name'>
+                    <div>Table:<t t-esc='data.table'/></div>
+                </t>
+            </div>
+            <br /><br />
+
+            <!-- Orderlines -->
+
+            <div class='orderlines' line-ratio='0.6'>
+                <t t-set='total' t-value='0' />
+                <t t-foreach='data.lines' t-as='orderline'>
+                    <t t-set='total' t-value='total + orderline.qty' />
+                    <line>
+                        <left><t t-esc="widget.get_product_by_id(orderline.product_id)"/></left>
+                        <right><t t-esc="orderline.qty"/></right>
+                    </line>
+                </t>
+            </div>
+            <line>
+                <left>Total Qty</left>
+                <right><t t-esc='total' /></right>
+            </line>
+        </receipt>
+    </t>
+    
+    <t t-name="WVOrderlineNoteButton">
+        <div class='control-button'>
+            <i class='fa fa-tag' /> Extra Note
+        </div>
+    </t>
+</templates>

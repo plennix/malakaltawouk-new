@@ -1,0 +1,32 @@
+
+Version 15.0.0.1 :
+		- Solved issue when enabled currency then payment getting traceback.
+
+=> 15.0.0.2 : Add French, Spanish , Arabic and Dutch translation in module also improved an index.
+
+Version 15.0.0.3 : (24-12-21)
+		- Solved amount currency value passing issue.
+		- Allow user to pay multiple times in multi currency.
+
+=> 15.0.0.4 : Improved an index with screen shots.
+
+Version 15.0.0.5 : (04-03-22)
+		- Display other currency in payment lines and also in receipt.
+
+Version 15.0.0.6 : (22-03-22)
+		- Index improved with screen shots.
+
+Version 15.0.0.7 : (05-05-22)
+	-- With the mobile view enable multi currency button is not show in the payment screen fixed that issue.
+
+Version 15.0.0.8 : (07-11-22)
+		- Cash rounding config is on that time not add to validate order fixed this issue.
+
+Version 15.0.0.9 : (10-11-22)
+		-- Update the keyerror for the currency_name
+
+Version 15.0.1.0 : (10-11-22)
+		- Update code for selected payment line and cancel line that time set currency conversion.
+
+Version 15.0.1.1 : (17-11-22)
+		- Update code for selected payment line that time not validate order fix issue.
