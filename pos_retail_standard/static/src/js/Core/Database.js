@@ -473,14 +473,17 @@ odoo.define('pos_retail_standard.database', function (require) {
             if (product.plu_number) {
                 str += '|' + product.plu_number;
             }
-            let barcodes = window.posmodel.barcodes_by_product_id[product.id];
+//            let barcodes = window.posmodel.barcodes_by_product_id[product.id];
+            let barcodes = false;
             if (barcodes && barcodes.length > 0) {
                 barcodes.map((b) => {
                     str += '|';
                     str += b.barcode;
                 })
             }
-            let barcodesPackaging = window.posmodel.packaging_barcode_by_product_id[product.id];
+//            let barcodesPackaging = window.posmodel.packaging_barcode_by_product_id[product.id];
+            let barcodesPackaging = false;
+
             if (barcodesPackaging && barcodesPackaging.length > 0) {
                 barcodesPackaging.map((b) => {
                     str += '|';
